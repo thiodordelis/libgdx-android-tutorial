@@ -16,11 +16,11 @@ public class MyGdxGame extends Game  implements ApplicationListener {
 	private SpriteBatch batch;
 	private OrthographicCamera camera;
     private Rectangle tuxRect;
-    Random rnd;
-    boolean showTux=true;
-    Long startTime;
-    int score;
-    boolean endGame;
+    private Random rnd;
+    private boolean showTux=true;
+    private Long startTime;
+    private int score;
+    private boolean endGame;
 
 	@Override
 	public void create () {
@@ -33,8 +33,8 @@ public class MyGdxGame extends Game  implements ApplicationListener {
         tuxRect.setWidth(Assets.tuxImage.getWidth());
         tuxRect.setHeight(Assets.tuxImage.getHeight());
 
-        tuxRect.x = 480 / 2 - 64 / 2; // center the bucket horizontally
-        tuxRect.y = 60; // bottom left corner of the bucket is 20 pi
+        tuxRect.x = 240f;
+        tuxRect.y = 60f;
 		batch = new SpriteBatch();
         rnd = new RandomXS128();
         rnd.setSeed(System.currentTimeMillis() / 1000L);
@@ -63,7 +63,7 @@ public class MyGdxGame extends Game  implements ApplicationListener {
             }
 
         } else {
-            System.out.println("END GAME"+score);
+            System.out.println("END GAME "+score);
             endGame = true;
         }
 
@@ -89,6 +89,6 @@ public class MyGdxGame extends Game  implements ApplicationListener {
 	@Override
 	public void dispose () {
 		batch.dispose();
-
+        Assets.dispose();
 	}
 }

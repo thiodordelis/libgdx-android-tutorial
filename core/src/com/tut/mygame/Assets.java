@@ -11,8 +11,7 @@ public class Assets {
         tuxImage = new Texture(Gdx.files.internal("tux.png"));
     }
 
-    public void dispose () {
+    static void dispose () {
         tuxImage.dispose();
-
     }
 }
