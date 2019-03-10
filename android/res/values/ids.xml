@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- app_id -->
+    <string name="app_id" >888999777</string>
+
+    <!-- package_name -->
+    <string name="package_name" >del.teo.com.hilow.deluxe</string>
+
+</resources>
